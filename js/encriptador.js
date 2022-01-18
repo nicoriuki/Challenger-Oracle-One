@@ -1,3 +1,4 @@
+/* Todas las varibles */
 const d = document,
       entrada = d.getElementById("entrada"),
       $error = d.getElementById("error"),
@@ -35,7 +36,7 @@ function desencrip() {
                   .replaceAll(u, "u")
                   .replaceAll(o, "o");
       } else {
-            alert("Solo se puede ingresar minusculas y sin acentos");
+             mensaje.innerHTML = error;
       }
 }
 

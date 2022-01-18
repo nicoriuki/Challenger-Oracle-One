@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/encriptador.css">
+  <title>Encriptador</title>
+</head>
+
+<body>
+  <header>
+    <h1>Encriptador</h1>
+  </header>
+  <main>
+    <div class="encriptador">
+      <label for="entrada">Mensaje </label>
+      <textarea type="text" name="entrada" id="entrada" class="entrada" cols="30" rows="10"
+        placeholder="Solo minusculas sin acentos"></textarea>
+      <div class="no-activo error" id="error">Por Favor solo ingrese minusculas sin acentos</div>
+      <input type="button" value="Encriptar" id="encriptar" class="encriptar" onclick="encrip()">
+      <input type="button" value="Desencriptar" id="desencriptar" class="desencriptar" onclick="desencrip()">
+    </div>
+    <div class="mensaje">
+      <label for="entrada">Resultado </label>
+      <textarea id="mensaje" name="mensaje" cols="30" rows="10"></textarea>
+      <input type="button" value="Copiar" id="copy" onclick="copiar()">
+      <input type="button" value="Resetear" onclick="location.reload()">
+    </div>
+  </main>
+  <footer>
+    <h2>Realizado por Nicolas Marquez</h2>
+  </footer>
+  <script src="./js/encriptador.js"></script>
+</body>
+
+
+</html>

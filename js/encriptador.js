@@ -10,9 +10,10 @@ const d = document,
       u = "utaf",
       error = "Solo se puede ingresar minusculas y sin acentos";
 let $input = entrada,
-      pattern = "[^a-zñ \n]";
-let regex = new RegExp(pattern);
+      pattern = "[^a-zñ \n]",
+      regex = new RegExp(pattern);
 
+/* Funcion de encriptar */
 function encrip() {
       let texto = entrada.value;
       if (!regex.exec(texto) == true) {
@@ -26,6 +27,7 @@ function encrip() {
             mensaje.innerHTML = error;
       }
 }
+/* Funcion de desencriptar */
 function desencrip() {
       let texto = entrada.value;
       if (!regex.exec(texto) == true) {
@@ -39,12 +41,13 @@ function desencrip() {
              mensaje.innerHTML = error;
       }
 }
-
+/* Funcion de copiar */
 function copiar() {
       mensaje.select();
       d.execCommand("copy");
 }
 
+/* Evento que detecta si los caracteres son los correctos */
 d.addEventListener("keyup", (e) => {
       if (e.target.matches(".entrada")) {
             let regex = new RegExp(pattern);
